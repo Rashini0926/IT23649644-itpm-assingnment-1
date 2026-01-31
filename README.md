@@ -230,24 +230,7 @@ Validates user interface elements:
 
 ---
 
-## 🔍 Project Scope
 
-### In Scope
-- Functional testing of transliteration accuracy
-- UI element verification
-- Input validation testing
-- Real-time behavior validation
-- Error handling verification
-
-### Out of Scope
-(As per assignment instructions)
-- Backend API testing
-- Performance testing
-- Security testing
-- Load testing
-- Accessibility testing
-
----
 
 ## 📄 Test Documentation
 
@@ -265,15 +248,6 @@ This Excel file contains:
 
 ---
 
-
-
----
-
-## 📜 License & Academic Integrity
-
-This project was created for academic purposes as part of university coursework. The code and test cases are original work developed independently according to assignment requirements.
-
----
 
 ## 🔗 Additional Resources
 
