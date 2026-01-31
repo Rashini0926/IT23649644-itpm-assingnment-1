@@ -1,8 +1,8 @@
 # ITPM Assignment 1 – Playwright Automation
 
-## 📌 Project Overview
+   ## Project Overview
 
-This repository contains automated functional test cases developed using **Playwright (JavaScript)** for a Singlish → Sinhala transliteration web application. The automation was implemented as part of **ITPM Assignment 1 (Semester 1)** for the BSc (Hons) in Information Technology – Year 3 program.
+This repository contains automated functional test cases developed using **Playwright (JavaScript)** for a Singlish → Sinhala transliteration web application. The automation was implemented as part of **ITPM Assignment 1
 
 ### Test Coverage
 
@@ -28,7 +28,7 @@ All test cases were independently designed and implemented according to the assi
 
 ## 🛠️ Technologies & Tools
 
-- **Runtime:** Node.js (LTS)
+
 - **Test Framework:** Playwright (JavaScript)
 - **IDE:** Visual Studio Code
 - **Browser:** Chromium (via Playwright)
@@ -42,8 +42,7 @@ All test cases were independently designed and implemented according to the assi
 IT23649644/
 │
 ├── .github/
-│   └── workflows/              # CI/CD workflows (if applicable)
-│
+│   └── workflows/             
 ├── data/
 │   ├── IT23649644-itpm excel.xlsx    # Test case documentation
 │   ├── IT23649644-screenshot.png     # Application screenshot
@@ -196,28 +195,8 @@ This automatically opens the most recent test execution report.
 ## 📝 Test Case Categories
 
 ### Positive Functional Tests (29 cases)
-These tests verify that the application correctly transliterates valid Singlish input to Sinhala:
-- Single word transliteration
-- Multiple word transliteration
-- Sentence transliteration
-- Special character handling
-- Real-time transliteration validation
-
 ### Negative Functional Tests (10 cases)
-These tests validate error handling and edge cases:
-- Empty input handling
-- Invalid character input
-- Maximum input length validation
-- Special character boundary testing
-- Unexpected input scenarios
-
 ### UI Test (1 case)
-Validates user interface elements:
-- Presence of required UI components
-- Layout verification
-- Element visibility and positioning
-
----
 
 ## 🎯 Key Features
 
@@ -227,9 +206,6 @@ Validates user interface elements:
 ✅ **Detailed Reporting** – HTML reports with screenshots and execution traces  
 ✅ **Modular Architecture** – Well-organized test structure for maintainability  
 ✅ **Independent Tests** – Each test case runs independently without dependencies  
-
----
-
 
 
 ## 📄 Test Documentation
@@ -245,8 +221,6 @@ This Excel file contains:
 - Expected results
 - Test data
 - Priority levels
-
----
 
 
 ## 🔗 Additional Resources
