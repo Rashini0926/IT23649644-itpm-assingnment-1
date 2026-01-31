@@ -1,120 +1,283 @@
 # ITPM Assignment 1 – Playwright Automation
 
-## 📌 Project Description
+## 📌 Project Overview
 
-This project contains automated functional test cases developed using **Playwright (JavaScript)** for a **Singlish → Sinhala transliteration web application**.
+This repository contains automated functional test cases developed using **Playwright (JavaScript)** for a Singlish → Sinhala transliteration web application. The automation was implemented as part of **ITPM Assignment 1 (Semester 1)** for the BSc (Hons) in Information Technology – Year 3 program.
 
-The automation was implemented as part of **ITPM Assignment 1** and includes:
-- 24 Positive Functional Test Cases
-- 10 Negative Functional Test Cases
-- 1 UI Test Case
+### Test Coverage
 
-All test cases were designed based on the assignment requirements and independently implemented
+- **29 Positive Functional Test Cases** – Validating expected behavior and successful scenarios
+- **10 Negative Functional Test Cases** – Testing error handling and edge cases
+- **1 UI Test Case** – Verifying user interface elements and layout
+
+All test cases were independently designed and implemented according to the assignment requirements.
 
 ---
 
 ## 🧪 Application Under Test
 
-- Application Name:SwiftTranslator  
-- Website URL: https://www.swifttranslator.com/  
-- Input Language:Singlish  
-- Output Language:Sinhala  
+| Property | Details |
+|----------|---------|
+| **Application Name** | SwiftTranslator |
+| **Website URL** | [https://www.swifttranslator.com/](https://www.swifttranslator.com/) |
+| **Input Language** | Singlish |
+| **Output Language** | Sinhala |
+| **Type** | Real-time transliteration (no convert button required) |
 
 ---
 
-## 🛠️ Technologies & Tools Used
+## 🛠️ Technologies & Tools
 
-- Node.js
-- Playwright (JavaScript)
-- Visual Studio Code
-- Chromium Browser (via Playwright)
-- Git & GitHub
+- **Runtime:** Node.js (LTS)
+- **Test Framework:** Playwright (JavaScript)
+- **IDE:** Visual Studio Code
+- **Browser:** Chromium (via Playwright)
+- **Version Control:** Git & GitHub
 
 ---
 
-## 📂 Project Folder Structure
+## 📂 Project Structure
+
+```
 IT23649644/
-.github/
-workflows/
-data/
-   IT23649644-itpm excel.xlsx
-   IT23649644-screenshot.png
-   IT23649644-git link.txt
-node_modules/
-playwright-report/
-test-results/
-tests/
-all.spec.js
-.gitignore
-package.json
-package-lock.json
-playwright.config.js
-README.md
-
-
----
-
-## ⚙️ Installation Instructions
-
-### ✅ Step 1: Install Required Software
-
-- Node.js (LTS version)
-  👉 https://nodejs.org/
-
-- Visual Studio Code 
-  👉 https://code.visualstudio.com/
+│
+├── .github/
+│   └── workflows/              # CI/CD workflows (if applicable)
+│
+├── data/
+│   ├── IT23649644-itpm excel.xlsx    # Test case documentation
+│   ├── IT23649644-screenshot.png     # Application screenshot
+│   └── IT23649644-git link.txt       # Repository link reference
+│
+├── node_modules/               # Project dependencies (auto-generated)
+├── playwright-report/          # HTML test reports (auto-generated)
+├── test-results/               # Test execution artifacts (auto-generated)
+│
+├── tests/
+│   └── all.spec.js            # All test cases (40 test cases)
+│
+├── .gitignore                 # Git ignore configuration
+├── package.json               # Node.js project configuration
+├── package-lock.json          # Dependency lock file
+├── playwright.config.js       # Playwright test configuration
+└── README.md                  # Project documentation (this file)
+```
 
 ---
 
-### ✅ Step 2: Open the Project
+## ⚙️ Installation & Setup
 
-1. Open **VS Code**
+### Prerequisites
+
+Before running this project, ensure you have the following installed:
+
+1. **Node.js (LTS version)** – [Download here](https://nodejs.org/)
+2. **Visual Studio Code** – [Download here](https://code.visualstudio.com/)
+3. **Git** (optional, for cloning) – [Download here](https://git-scm.com/)
+
+### Step-by-Step Setup
+
+#### 1️⃣ Clone or Download the Project
+
+**Option A: Clone via Git**
+```bash
+git clone <repository-url>
+cd IT23649644
+```
+
+**Option B: Download ZIP**
+- Download the project ZIP file
+- Extract to your desired location
+- Navigate to the `IT23649644` folder
+
+#### 2️⃣ Open Project in VS Code
+
+1. Launch **Visual Studio Code**
 2. Click **File → Open Folder**
-3. Select the project folder: `IT23649644`
+3. Select the `IT23649644` folder
 
----
+#### 3️⃣ Install Dependencies
 
-### ✅ Step 3: Install Project Dependencies
+Open the integrated terminal in VS Code (`Ctrl + ~` or `View → Terminal`) and run:
 
-Open the VS Code terminal and run:
-
-bash
+```bash
 npm install
+```
+
+This will install all required dependencies including Playwright.
+
+#### 4️⃣ Install Playwright Browsers
+
+```bash
 npx playwright install
----
+```
 
-## ▶️ How to Run the Project
-
-Follow the steps below to execute the Playwright automation project.
+This downloads the required browser binaries (Chromium, Firefox, WebKit).
 
 ---
 
-### ✅ Step 1: Open the Project
+## ▶️ Running Tests
 
-1. Open **Visual Studio Code**
-2. Open the project folder: `name`
-3. Open the **Terminal**  
-   - Press `Ctrl + `` (backtick)  
-   - OR go to **Terminal → New Terminal**
+### Run All Tests (Headless Mode)
 
----
-
-### ✅ Step 2: Run All Test Cases
-
-In the terminal, execute:
+Execute all test cases without opening a browser window:
 
 ```bash
 npx playwright test
+```
 
-**Run Tests with Browser Visible (Headed Mode)**
+### Run Tests with Visible Browser (Headed Mode)
+
+Watch the tests execute in real-time:
+
+```bash
 npx playwright test tests/all.spec.js --project=chromium --headed
+```
 
-How to Get the Test Report
---npx playwright show-report
-terminal will display:
---Serving HTML report at http://localhost:9323
-How to Stop / Quit the Report Server
---Ctrl + C
+### Run Specific Test File
+
+```bash
+npx playwright test tests/all.spec.js
+```
+
+### Run Tests in Debug Mode
+
+Step through tests with Playwright Inspector:
+
+```bash
+npx playwright test --debug
+```
+
+### Run Tests with UI Mode
+
+Interactive mode for exploring and debugging tests:
+
+```bash
+npx playwright test --ui
+```
+
+---
+
+## 📊 Viewing Test Results
+
+### Generate HTML Report
+
+After running tests, generate and view the HTML report:
+
+```bash
+npx playwright show-report
+```
+
+The terminal will display:
+```
+Serving HTML report at http://localhost:9323
+```
+
+Open the URL in your browser to view:
+- Test execution summary
+- Detailed test results
+- Screenshots and traces (if configured)
+- Pass/fail statistics
+
+### Stop the Report Server
+
+Press `Ctrl + C` in the terminal.
+
+### View Last Test Run Results
+
+```bash
+npx playwright show-report
+```
+
+This automatically opens the most recent test execution report.
+
+---
+
+## 📝 Test Case Categories
+
+### Positive Functional Tests (29 cases)
+These tests verify that the application correctly transliterates valid Singlish input to Sinhala:
+- Single word transliteration
+- Multiple word transliteration
+- Sentence transliteration
+- Special character handling
+- Real-time transliteration validation
+
+### Negative Functional Tests (10 cases)
+These tests validate error handling and edge cases:
+- Empty input handling
+- Invalid character input
+- Maximum input length validation
+- Special character boundary testing
+- Unexpected input scenarios
+
+### UI Test (1 case)
+Validates user interface elements:
+- Presence of required UI components
+- Layout verification
+- Element visibility and positioning
+
+---
+
+## 🎯 Key Features
+
+✅ **Comprehensive Coverage** – 40 test cases covering positive, negative, and UI scenarios  
+✅ **Real-time Validation** – Tests validate instant transliteration without convert button  
+✅ **Cross-browser Ready** – Configured for Chromium (can be extended to Firefox/WebKit)  
+✅ **Detailed Reporting** – HTML reports with screenshots and execution traces  
+✅ **Modular Architecture** – Well-organized test structure for maintainability  
+✅ **Independent Tests** – Each test case runs independently without dependencies  
+
+---
+
+## 🔍 Project Scope
+
+### In Scope
+- Functional testing of transliteration accuracy
+- UI element verification
+- Input validation testing
+- Real-time behavior validation
+- Error handling verification
+
+### Out of Scope
+(As per assignment instructions)
+- Backend API testing
+- Performance testing
+- Security testing
+- Load testing
+- Accessibility testing
+
+---
+
+## 📄 Test Documentation
+
+Detailed test case documentation is available in:
+```
+data/IT23649644-itpm excel.xlsx
+```
+
+This Excel file contains:
+- Test case IDs
+- Test case descriptions
+- Expected results
+- Test data
+- Priority levels
+
+---
 
 
 
+---
+
+## 📜 License & Academic Integrity
+
+This project was created for academic purposes as part of university coursework. The code and test cases are original work developed independently according to assignment requirements.
+
+---
+
+## 🔗 Additional Resources
+
+- [Playwright Documentation](https://playwright.dev/)
+- [Playwright API Reference](https://playwright.dev/docs/api/class-playwright)
+- [Node.js Documentation](https://nodejs.org/docs/)
+- [JavaScript Testing Best Practices](https://playwright.dev/docs/best-practices)
