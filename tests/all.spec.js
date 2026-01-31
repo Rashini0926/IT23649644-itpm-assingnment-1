@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-/* ================= POSITIVE FUNCTIONAL (24) ================= */
+/* ================= POSITIVE FUNCTIONAL (29) ================= */
 
 test('Pos_Fun_0001 - Convert greeting phrase', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
@@ -240,6 +240,58 @@ test('Pos_Fun_0024 - Convert multi-sentence input', async ({ page }) => {
   await page.waitForTimeout(5000);
   const result = await page.locator('textarea').last().inputValue();
   console.log('Pos_Fun_0024 ->', result);
+});
+
+/* ======= ADDED 5 MORE POSITIVE FUNCTIONAL (Pos_Fun_0025 - 0029) ======= */
+
+test('Pos_Fun_0025 - Convert response phrase (short, realistic)', async ({ page }) => {
+  await page.goto('https://www.swifttranslator.com/');
+  const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
+  await expect(input).toBeVisible();
+  await input.fill('hari, mama karannam.');
+  await page.waitForTimeout(5000);
+  const result = await page.locator('textarea').last().inputValue();
+  console.log('Pos_Fun_0025 ->', result);
+});
+
+test('Pos_Fun_0026 - Convert imperative with object (command form)', async ({ page }) => {
+  await page.goto('https://www.swifttranslator.com/');
+  const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
+  await expect(input).toBeVisible();
+  await input.fill('eeka dhenna.');
+  await page.waitForTimeout(5000);
+  const result = await page.locator('textarea').last().inputValue();
+  console.log('Pos_Fun_0026 ->', result);
+});
+
+test('Pos_Fun_0027 - Convert common collocation / phrase pattern', async ({ page }) => {
+  await page.goto('https://www.swifttranslator.com/');
+  const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
+  await expect(input).toBeVisible();
+  await input.fill('poddak inna, mama gihin ennam.');
+  await page.waitForTimeout(5000);
+  const result = await page.locator('textarea').last().inputValue();
+  console.log('Pos_Fun_0027 ->', result);
+});
+
+test('Pos_Fun_0028 - Convert mixed Singlish + English abbreviations', async ({ page }) => {
+  await page.goto('https://www.swifttranslator.com/');
+  const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
+  await expect(input).toBeVisible();
+  await input.fill('OTP eka SMS eken enne, ekata reply karanna epa.');
+  await page.waitForTimeout(5000);
+  const result = await page.locator('textarea').last().inputValue();
+  console.log('Pos_Fun_0028 ->', result);
+});
+
+test('Pos_Fun_0029 - Convert complex (cause/effect) with punctuation', async ({ page }) => {
+  await page.goto('https://www.swifttranslator.com/');
+  const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
+  await expect(input).toBeVisible();
+  await input.fill('mama gedhara giye traffic nisa; e nisa late una.');
+  await page.waitForTimeout(5000);
+  const result = await page.locator('textarea').last().inputValue();
+  console.log('Pos_Fun_0029 ->', result);
 });
 
 /* ================= NEGATIVE FUNCTIONAL (10) ================= */
