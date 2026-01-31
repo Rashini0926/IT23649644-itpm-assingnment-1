@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 /* ================= POSITIVE FUNCTIONAL (24) ================= */
 
-test('Pos_Fun_0001', async ({ page }) => {
+test('Pos_Fun_0001 - Convert greeting phrase', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -12,7 +12,7 @@ test('Pos_Fun_0001', async ({ page }) => {
   console.log('Pos_Fun_0001 ->', result);
 });
 
-test('Pos_Fun_0002', async ({ page }) => {
+test('Pos_Fun_0002 - Convert interrogative greeting', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -22,7 +22,7 @@ test('Pos_Fun_0002', async ({ page }) => {
   console.log('Pos_Fun_0002 ->', result);
 });
 
-test('Pos_Fun_0003', async ({ page }) => {
+test('Pos_Fun_0003 - Convert daily food request', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -32,7 +32,7 @@ test('Pos_Fun_0003', async ({ page }) => {
   console.log('Pos_Fun_0003 ->', result);
 });
 
-test('Pos_Fun_0004', async ({ page }) => {
+test('Pos_Fun_0004 - Convert polite request', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -42,7 +42,7 @@ test('Pos_Fun_0004', async ({ page }) => {
   console.log('Pos_Fun_0004 ->', result);
 });
 
-test('Pos_Fun_0005', async ({ page }) => {
+test('Pos_Fun_0005 - Convert command', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -52,7 +52,7 @@ test('Pos_Fun_0005', async ({ page }) => {
   console.log('Pos_Fun_0005 ->', result);
 });
 
-test('Pos_Fun_0006', async ({ page }) => {
+test('Pos_Fun_0006 - Convert present tense', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -62,7 +62,7 @@ test('Pos_Fun_0006', async ({ page }) => {
   console.log('Pos_Fun_0006 ->', result);
 });
 
-test('Pos_Fun_0007', async ({ page }) => {
+test('Pos_Fun_0007 - Convert past tense', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -72,7 +72,7 @@ test('Pos_Fun_0007', async ({ page }) => {
   console.log('Pos_Fun_0007 ->', result);
 });
 
-test('Pos_Fun_0008', async ({ page }) => {
+test('Pos_Fun_0008 - Convert future tense', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -82,7 +82,7 @@ test('Pos_Fun_0008', async ({ page }) => {
   console.log('Pos_Fun_0008 ->', result);
 });
 
-test('Pos_Fun_0009', async ({ page }) => {
+test('Pos_Fun_0009 - Convert negation', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -92,7 +92,7 @@ test('Pos_Fun_0009', async ({ page }) => {
   console.log('Pos_Fun_0009 ->', result);
 });
 
-test('Pos_Fun_0010', async ({ page }) => {
+test('Pos_Fun_0010 - Convert pronoun question', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -102,7 +102,7 @@ test('Pos_Fun_0010', async ({ page }) => {
   console.log('Pos_Fun_0010 ->', result);
 });
 
-test('Pos_Fun_0011', async ({ page }) => {
+test('Pos_Fun_0011 - Convert plural question', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -112,7 +112,7 @@ test('Pos_Fun_0011', async ({ page }) => {
   console.log('Pos_Fun_0011 ->', result);
 });
 
-test('Pos_Fun_0012', async ({ page }) => {
+test('Pos_Fun_0012 - Convert repetition emphasis', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -122,7 +122,7 @@ test('Pos_Fun_0012', async ({ page }) => {
   console.log('Pos_Fun_0012 ->', result);
 });
 
-test('Pos_Fun_0013', async ({ page }) => {
+test('Pos_Fun_0013 - Convert compound sentence', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -132,7 +132,7 @@ test('Pos_Fun_0013', async ({ page }) => {
   console.log('Pos_Fun_0013 ->', result);
 });
 
-test('Pos_Fun_0014', async ({ page }) => {
+test('Pos_Fun_0014 - Convert conditional sentence', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -142,7 +142,7 @@ test('Pos_Fun_0014', async ({ page }) => {
   console.log('Pos_Fun_0014 ->', result);
 });
 
-test('Pos_Fun_0015', async ({ page }) => {
+test('Pos_Fun_0015 - Convert polite request (long)', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -152,7 +152,7 @@ test('Pos_Fun_0015', async ({ page }) => {
   console.log('Pos_Fun_0015 ->', result);
 });
 
-test('Pos_Fun_0016', async ({ page }) => {
+test('Pos_Fun_0016 - Convert place + English words', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -162,7 +162,7 @@ test('Pos_Fun_0016', async ({ page }) => {
   console.log('Pos_Fun_0016 ->', result);
 });
 
-test('Pos_Fun_0017', async ({ page }) => {
+test('Pos_Fun_0017 - Convert tech term', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -172,7 +172,7 @@ test('Pos_Fun_0017', async ({ page }) => {
   console.log('Pos_Fun_0017 ->', result);
 });
 
-test('Pos_Fun_0018', async ({ page }) => {
+test('Pos_Fun_0018 - Convert time format', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -182,7 +182,7 @@ test('Pos_Fun_0018', async ({ page }) => {
   console.log('Pos_Fun_0018 ->', result);
 });
 
-test('Pos_Fun_0019', async ({ page }) => {
+test('Pos_Fun_0019 - Convert currency', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -192,7 +192,7 @@ test('Pos_Fun_0019', async ({ page }) => {
   console.log('Pos_Fun_0019 ->', result);
 });
 
-test('Pos_Fun_0020', async ({ page }) => {
+test('Pos_Fun_0020 - Convert date format', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -202,7 +202,7 @@ test('Pos_Fun_0020', async ({ page }) => {
   console.log('Pos_Fun_0020 ->', result);
 });
 
-test('Pos_Fun_0021', async ({ page }) => {
+test('Pos_Fun_0021 - Convert unit of measurement', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -212,7 +212,7 @@ test('Pos_Fun_0021', async ({ page }) => {
   console.log('Pos_Fun_0021 ->', result);
 });
 
-test('Pos_Fun_0022', async ({ page }) => {
+test('Pos_Fun_0022 - Convert abbreviation', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -222,7 +222,7 @@ test('Pos_Fun_0022', async ({ page }) => {
   console.log('Pos_Fun_0022 ->', result);
 });
 
-test('Pos_Fun_0023', async ({ page }) => {
+test('Pos_Fun_0023 - Convert mixed English content', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -232,7 +232,7 @@ test('Pos_Fun_0023', async ({ page }) => {
   console.log('Pos_Fun_0023 ->', result);
 });
 
-test('Pos_Fun_0024', async ({ page }) => {
+test('Pos_Fun_0024 - Convert multi-sentence input', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -244,7 +244,7 @@ test('Pos_Fun_0024', async ({ page }) => {
 
 /* ================= NEGATIVE FUNCTIONAL (10) ================= */
 
-test('Neg_Fun_0001', async ({ page }) => {
+test('Neg_Fun_0001 - Joined words input', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -254,7 +254,7 @@ test('Neg_Fun_0001', async ({ page }) => {
   console.log('Neg_Fun_0001 ->', result);
 });
 
-test('Neg_Fun_0002', async ({ page }) => {
+test('Neg_Fun_0002 - Joined short words', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -264,7 +264,7 @@ test('Neg_Fun_0002', async ({ page }) => {
   console.log('Neg_Fun_0002 ->', result);
 });
 
-test('Neg_Fun_0003', async ({ page }) => {
+test('Neg_Fun_0003 - Punctuation overload', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -274,7 +274,7 @@ test('Neg_Fun_0003', async ({ page }) => {
   console.log('Neg_Fun_0003 ->', result);
 });
 
-test('Neg_Fun_0004', async ({ page }) => {
+test('Neg_Fun_0004 - Symbol stress input', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -284,7 +284,7 @@ test('Neg_Fun_0004', async ({ page }) => {
   console.log('Neg_Fun_0004 ->', result);
 });
 
-test('Neg_Fun_0005', async ({ page }) => {
+test('Neg_Fun_0005 - Multiple spaces', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -294,7 +294,7 @@ test('Neg_Fun_0005', async ({ page }) => {
   console.log('Neg_Fun_0005 ->', result);
 });
 
-test('Neg_Fun_0006', async ({ page }) => {
+test('Neg_Fun_0006 - Line breaks', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -304,7 +304,7 @@ test('Neg_Fun_0006', async ({ page }) => {
   console.log('Neg_Fun_0006 ->', result);
 });
 
-test('Neg_Fun_0007', async ({ page }) => {
+test('Neg_Fun_0007 - Long paragraph input', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -316,7 +316,7 @@ test('Neg_Fun_0007', async ({ page }) => {
   console.log('Neg_Fun_0007 ->', result);
 });
 
-test('Neg_Fun_0008', async ({ page }) => {
+test('Neg_Fun_0008 - Slang usage', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -326,7 +326,7 @@ test('Neg_Fun_0008', async ({ page }) => {
   console.log('Neg_Fun_0008 ->', result);
 });
 
-test('Neg_Fun_0009', async ({ page }) => {
+test('Neg_Fun_0009 - English only input', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -336,7 +336,7 @@ test('Neg_Fun_0009', async ({ page }) => {
   console.log('Neg_Fun_0009 ->', result);
 });
 
-test('Neg_Fun_0010', async ({ page }) => {
+test('Neg_Fun_0010 - Random characters', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
@@ -348,7 +348,7 @@ test('Neg_Fun_0010', async ({ page }) => {
 
 /* ================= UI TEST (1) ================= */
 
-test('Pos_UI_0001', async ({ page }) => {
+test('Pos_UI_0001 - Clear input clears output', async ({ page }) => {
   await page.goto('https://www.swifttranslator.com/');
   const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
   await expect(input).toBeVisible();
